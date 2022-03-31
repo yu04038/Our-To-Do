@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OurToDo">
         <activity
-            android:name=".MainActivity"
+            android:name=".screen.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
