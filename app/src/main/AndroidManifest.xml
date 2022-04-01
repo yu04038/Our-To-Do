@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OurToDo">
         <activity
+            android:name=".screen.splash.SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".screen.main.MainActivity"
             android:exported="true">
             <intent-filter>
