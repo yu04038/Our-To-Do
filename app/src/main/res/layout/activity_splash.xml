@@ -4,6 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".screen.splash.SplashActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Our"
+        android:layout_width="258dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="104.5dp"
+        android:layout_marginBottom="16.17dp"
+        android:background="@drawable/splash_our_shape"
+        app:layout_constraintBottom_toTopOf="@+id/ToDo"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/rota_semibold"
+            android:text="OUR"
+            android:textColor="#333333"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ToDo"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="150.5dp"
+        android:layout_marginBottom="16.17dp"
+        android:background="@drawable/splash_todo_shape"
+        app:layout_constraintBottom_toTopOf="@+id/bookMark"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:gravity="center_horizontal"
+            android:text="TO DO"
+            android:fontFamily="@font/rota_semibold"
+            android:textColor="#333333"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/splash_todo_icon"
+            android:layout_width="93px"
+            android:layout_height="93px"
+            android:layout_marginRight="38.49px"
+            android:src="@drawable/splash_todo_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookMark"
+        android:layout_width="287dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="75.5dp"
+        android:layout_marginBottom="121dp"
+        android:background="@drawable/splash_bookmark_shape"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="46dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/rota_semibold"
+            android:text="&amp; BOOKMARK"
+            android:textColor="#333333"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_todo"
+            android:layout_width="93px"
+            android:layout_height="93px"
+            android:layout_marginRight="38.49px"
+            android:src="@drawable/splash_bookmark_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/login_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/splash_button_shape"
+        android:text="로그인"
+        android:textColor="#333333"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signup_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/splash_button_shape"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+        android:text="회원가입"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/forgot_my_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/forgot_my_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="회원 정보를 잊으셨습니까?"
+        android:textColor="#494949"
+        android:textSize="12dp"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="135dp"
+        android:layout_height="0.6dp"
+        android:layout_marginBottom="24dp"
+        android:background="#494949"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

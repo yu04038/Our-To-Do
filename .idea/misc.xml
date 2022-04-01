@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/splash_bookmark_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_button_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_image_radius.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_our_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_radius.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_todo_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/font/rota.xml" value="0.5645833333333333" />
+        <entry key="app/src/main/res/font/spoqa.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30027173913043476" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
       </map>
     </option>
   </component>
