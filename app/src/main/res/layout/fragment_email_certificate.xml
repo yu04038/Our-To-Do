@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen.login.EmailCertificateFragment">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -37,7 +37,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/email_certification"
             android:padding="14dp"
             android:hint="이메일(exampe@ourtodo.com)"
             android:textColorHint="#BFBFBF"
@@ -51,7 +51,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+        <TextView
+            android:id="@+id/warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
+            android:text="정확한 이메일을 입력해주세요!"
+            android:textColor="#EC0E0E"
+            android:textSize="12dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_certification" />
+
+
         <Button
+            android:id="@+id/go_to_certification"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="320dp"
             android:layout_height="52dp"
@@ -70,6 +86,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        
+
 
 </FrameLayout>

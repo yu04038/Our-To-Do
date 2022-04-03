@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/email_certificate_button_shape_disabled.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_focused.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_valid.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/splash_bookmark_shape.xml" value="0.361" />
         <entry key="app/src/main/res/drawable/splash_button_shape.xml" value="0.361" />
         <entry key="app/src/main/res/drawable/splash_image_radius.xml" value="0.361" />
