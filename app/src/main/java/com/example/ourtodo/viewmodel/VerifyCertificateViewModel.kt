@@ -1,17 +1,19 @@
 package com.example.ourtodo.viewmodel
 
-import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.example.ourtodo.data.repository.LoginRepository
-import com.example.ourtodo.screen.login.VerifyCertificateFragment
 import kotlinx.coroutines.launch
-import kotlin.collections.HashMap
 
-class EmailCertificateViewModel(
+class VerifyCertificateViewModel(
     private val loginRepository: LoginRepository
 ): BaseViewModel() {
 
-    fun getEmailCertificationCode(email: HashMap<String, Any>) = viewModelScope.launch {
+    fun resendCertificationCode(email: HashMap<String, Any>) = viewModelScope.launch {
         loginRepository.signUpCertificationMail(email)
+    }
+
+    fun verifyCertificationMail(data: HashMap<String, Any>) = viewModelScope.launch {
+        loginRepository.verifyCertificationMail(data)
     }
 }

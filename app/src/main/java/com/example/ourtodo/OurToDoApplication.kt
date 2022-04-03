@@ -3,7 +3,7 @@ package com.example.ourtodo
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import androidx.preference.PreferenceManager
+import com.example.ourtodo.data.preference.PreferenceManager
 import com.example.ourtodo.di.appModule
 import com.example.ourtodo.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -14,6 +14,7 @@ import org.koin.core.logger.Level
 class OurToDoApplication : Application() {
 
     override fun onCreate() {
+        prefs = PreferenceManager(applicationContext)
         super.onCreate()
         appContext = this
 

@@ -24,18 +24,18 @@ class SignUpActivity : BaseActivity<SignUpViewModel, ActivitySignUpBinding>() {
         showFragment(EmailCertificateFragment.newInstance(), EmailCertificateFragment.TAG)
     }
 
-    private fun showFragment(fragment: Fragment, tag: String) {
+    fun showFragment(fragment: Fragment, tag: String) {
         val findFragment = supportFragmentManager.findFragmentByTag(tag)
 
         supportFragmentManager.fragments.forEach { fm ->
-            supportFragmentManager.beginTransaction().hide(fm).commitAllowingStateLoss()
+            supportFragmentManager.beginTransaction().hide(fm).commit()
         }
         findFragment?.let {
-            supportFragmentManager.beginTransaction().show(it).commitAllowingStateLoss()
+            supportFragmentManager.beginTransaction().show(it).commit()
         } ?: kotlin.run {
             supportFragmentManager.beginTransaction()
                 .add(R.id.signUpContainer, fragment, tag)
-                .commitAllowingStateLoss()
+                .commit()
         }
     }
 

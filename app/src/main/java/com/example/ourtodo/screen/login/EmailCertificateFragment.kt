@@ -1,10 +1,12 @@
 package com.example.ourtodo.screen.login
 
 import android.graphics.Color
+import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.FragmentEmailCertificateBinding
 import com.example.ourtodo.screen.base.BaseFragment
@@ -30,8 +32,11 @@ class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, Fragmen
 
         goToCertification.setOnClickListener {
             if (clickable) {
+                OurToDoApplication.prefs.setString("email", email)
+
                 data.put("email", email)
                 viewModel.getEmailCertificationCode(data)
+                (activity as SignUpActivity).showFragment(VerifyCertificateFragment.newInstance(), VerifyCertificateFragment.TAG)
             }
         }
 

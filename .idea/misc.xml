@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_email_certificate.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_verify_certificate.xml" value="0.33" />
       </map>
     </option>
   </component>
