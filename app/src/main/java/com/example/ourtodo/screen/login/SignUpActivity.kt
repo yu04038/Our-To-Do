@@ -24,7 +24,7 @@ class SignUpActivity : BaseActivity<SignUpViewModel, ActivitySignUpBinding>() {
         showFragment(EmailCertificateFragment.newInstance(), EmailCertificateFragment.TAG)
     }
 
-    open fun showFragment(fragment: Fragment, tag: String) {
+    private fun showFragment(fragment: Fragment, tag: String) {
         val findFragment = supportFragmentManager.findFragmentByTag(tag)
 
         supportFragmentManager.fragments.forEach { fm ->

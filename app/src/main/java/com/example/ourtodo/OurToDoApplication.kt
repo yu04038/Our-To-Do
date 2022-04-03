@@ -8,7 +8,7 @@ import com.example.ourtodo.di.appModule
 import com.example.ourtodo.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
+import org.koin.core.context.GlobalContext.startKoin
 import org.koin.core.logger.Level
 
 class OurToDoApplication : Application() {
@@ -20,8 +20,7 @@ class OurToDoApplication : Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@OurToDoApplication)
-            modules(appModule)
-            modules(viewModelModule)
+            modules(appModule, viewModelModule)
         }
     }
 

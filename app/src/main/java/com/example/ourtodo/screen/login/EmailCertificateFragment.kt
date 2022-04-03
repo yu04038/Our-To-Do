@@ -10,6 +10,7 @@ import com.example.ourtodo.databinding.FragmentEmailCertificateBinding
 import com.example.ourtodo.screen.base.BaseFragment
 import com.example.ourtodo.viewmodel.EmailCertificateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.*
 
 class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, FragmentEmailCertificateBinding>() {
 
@@ -17,6 +18,8 @@ class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, Fragmen
 
     override val viewModel by viewModel<EmailCertificateViewModel>()
 
+    private var email = ""
+    private var data = HashMap<String, Any>()
     private var clickable = false
 
     override fun observeData() {
@@ -27,7 +30,8 @@ class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, Fragmen
 
         goToCertification.setOnClickListener {
             if (clickable) {
-                Log.e("goToCertification", "클릭")
+                data.put("email", email)
+                viewModel.getEmailCertificationCode(data)
             }
         }
 
@@ -36,7 +40,7 @@ class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, Fragmen
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                val email = p0.toString()
+                email = p0.toString()
                 val isValid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
                 if (!isValid) {
                     emailCertification.setBackgroundResource(R.drawable.email_certificate_edittext_shape_not_valid)
@@ -60,7 +64,6 @@ class EmailCertificateFragment : BaseFragment<EmailCertificateViewModel, Fragmen
     }
 
     companion object {
-        const val CERTIFI_NUMBER = "210523"
         const val TAG = "EmailCertificateFragment"
         fun newInstance() = EmailCertificateFragment()
     }
