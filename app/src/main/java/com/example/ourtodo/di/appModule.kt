@@ -1,6 +1,7 @@
 package com.example.ourtodo.di
 
 import com.example.ourtodo.data.repository.LoginRepository
+import com.example.ourtodo.data.repository.ParseErrorMessage
 import com.example.ourtodo.viewmodel.EmailCertificateViewModel
 import com.example.ourtodo.viewmodel.SignUpViewModel
 import com.example.ourtodo.viewmodel.VerifyCertificateViewModel
@@ -11,9 +12,10 @@ import org.koin.dsl.module
 var appModule = module {
 
 
-    single { LoginRepository(get())}
+    single { LoginRepository(get(), get())}
     single { Dispatchers.IO }
     single { Dispatchers.Main }
+    single { ParseErrorMessage }
 }
 
 var viewModelModule = module {

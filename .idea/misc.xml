@@ -18,7 +18,7 @@
         <entry key="app/src/main/res/font/spoqa.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30027173913043476" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21458333333333332" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_email_certificate.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_verify_certificate.xml" value="0.33" />
       </map>

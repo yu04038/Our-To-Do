@@ -6,7 +6,8 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
 class LoginRepository(
-    private val ioDispatcher: CoroutineDispatcher
+    private val ioDispatcher: CoroutineDispatcher,
+    private val parseErrorMessage: ParseErrorMessage
 ) {
 
     suspend fun signUpCertificationMail(email: HashMap<String, Any>): Unit = withContext(ioDispatcher) {
@@ -15,9 +16,13 @@ class LoginRepository(
         Log.e("이메일 인증", response.body().toString())
     }
 
-    suspend fun verifyCertificationMail(data: HashMap<String, Any>) : Unit = withContext(ioDispatcher) {
-
+    suspend fun verifyCertificationMail(data: HashMap<String, Any>) : String = withContext(ioDispatcher) {
         val response = RetrofitInstance.api.verifyCertificationMail(data)
-        Log.e("인증 결과", response.body().toString())
+
+        if (response.isSuccessful) {
+            return@withContext response.body()!!.message
+        } else {
+            return@withContext parseErrorMessage.parseErrorMessage(response)
+        }
     }
 }

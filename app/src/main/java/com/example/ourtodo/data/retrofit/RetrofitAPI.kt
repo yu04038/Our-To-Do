@@ -1,6 +1,8 @@
 package com.example.ourtodo.data.retrofit
 
 import com.example.ourtodo.data.response.Message
+import okhttp3.ResponseBody
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -13,7 +15,7 @@ interface RetrofitAPI {
         @Body email: HashMap<String, Any>
     ): Response<Message>
 
-    @POST("auth/certification/verify/signup")
+    @POST("auth/certification/verification/signup")
     suspend fun verifyCertificationMail(
         @Body data: HashMap<String, Any>
     ): Response<Message>
