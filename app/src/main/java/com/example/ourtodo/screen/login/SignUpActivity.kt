@@ -1,7 +1,5 @@
 package com.example.ourtodo.screen.login
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.ActivitySignUpBinding

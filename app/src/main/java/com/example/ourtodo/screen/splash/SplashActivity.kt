@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.ourtodo.R
+import com.example.ourtodo.screen.login.LoginActivity
 import com.example.ourtodo.screen.login.SignUpActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -18,7 +19,11 @@ class SplashActivity : AppCompatActivity() {
         signUpButton.setOnClickListener {
             val intent = Intent(this@SplashActivity, SignUpActivity::class.java)
             startActivity(intent)
-            finish()
+        }
+
+        loginButton.setOnClickListener {
+            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 }

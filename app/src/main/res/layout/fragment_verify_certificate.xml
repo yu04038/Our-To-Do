@@ -12,7 +12,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="207dp"
+            android:layout_width="208dp"
             android:layout_height="54dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="80dp"
@@ -29,7 +29,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="59dp"
-            android:background="@drawable/email_certificate_button_shape_enabled"
+            android:background="@drawable/email_certificate_edittext_shape_not_focused"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -91,6 +91,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/certificate_layout" />
 
+        <TextView
+            android:id="@+id/certificate_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="12dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/certificate_layout" />
+
+        <TextView
+            android:id="@+id/certificate_failure2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="34dp"
+            android:text=""
+            android:textColor="#EC0E0E"
+            android:textSize="12dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/certificate_failure" />
+
         <Button
             android:id="@+id/go_to_password"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -106,12 +134,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
 </FrameLayout>
