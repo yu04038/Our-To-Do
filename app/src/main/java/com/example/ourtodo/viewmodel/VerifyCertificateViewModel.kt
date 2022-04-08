@@ -19,5 +19,7 @@ class VerifyCertificateViewModel(
     fun verifyCertificationMail(data: HashMap<String, Any>) = viewModelScope.launch {
         val message = loginRepository.verifyCertificationMail(data)
         verifyMessage.value = message
+
+
     }
 }
