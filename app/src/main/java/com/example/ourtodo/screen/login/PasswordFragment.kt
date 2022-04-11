@@ -1,27 +1,25 @@
 package com.example.ourtodo.screen.login
 
-import android.content.Intent
 import android.graphics.Color
-import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.FragmentPasswordBinding
-import com.example.ourtodo.databinding.FragmentVerifyCertificateBinding
 import com.example.ourtodo.screen.base.BaseFragment
-import com.example.ourtodo.screen.splash.SplashActivity
 import com.example.ourtodo.viewmodel.PasswordViewModel
-import com.example.ourtodo.viewmodel.VerifyCertificateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding>() {
 
     private var firstPassword = ""
+    private var secondPassword = ""
+    private val data = HashMap<String, Any>()
+    private val email = OurToDoApplication.prefs.getString("email")
     private var clickable = false
 
     override fun getViewBinding(): FragmentPasswordBinding = FragmentPasswordBinding.inflate(layoutInflater)
@@ -29,6 +27,16 @@ class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding
     override val viewModel by viewModel<PasswordViewModel>()
 
     override fun observeData() {
+
+        viewModel.completeSignUp.observe(this, Observer {
+            when(it) {
+                true -> {
+                    Log.e("signup", "완료");
+                    (activity as SignUpActivity).finish()
+                }
+                else -> {Toast.makeText(context, "존재하는 이메일입니다.", Toast.LENGTH_SHORT).show()}
+            }
+        })
 
     }
 
@@ -57,7 +65,7 @@ class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding
 
         passwordVerify.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
-
+                secondPassword = passwordVerify.text.toString()
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -66,7 +74,6 @@ class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if (passwordVerify.text.toString() != firstPassword) {
-                    Log.e("password", "$firstPassword, $p0")
                     passwordVerifyFailure.visibility = View.VISIBLE
                     passwordVerify.setBackgroundResource(R.drawable.email_certificate_button_shape_failure)
                     goToSplash.setBackgroundResource(R.drawable.email_certificate_button_shape_disabled)
@@ -84,10 +91,13 @@ class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding
 
         goToSplash.setOnClickListener {
             if (clickable) {
-                activity?.let {
-                    val intent = Intent(context, SplashActivity::class.java)
-                    startActivity(intent)
-                }
+                data.put("email", email)
+                data.put("password", firstPassword)
+                data.put("confirmPassword", secondPassword)
+
+//                Log.e("password", "$firstPassword, $secondPassword")
+
+                viewModel.signup(data)
             }
         }
     }

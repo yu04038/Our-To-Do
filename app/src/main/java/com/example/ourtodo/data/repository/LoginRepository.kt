@@ -25,4 +25,16 @@ class LoginRepository(
             return@withContext parseErrorMessage.parseErrorMessage(response)
         }
     }
+
+    suspend fun signup(data: HashMap<String, Any>) : Boolean = withContext(ioDispatcher) {
+        val response = RetrofitInstance.api.signup(data)
+
+        if (response.isSuccessful) {
+            Log.e("회원가입", response.body().toString())
+        } else {
+            Log.e("회원가입", parseErrorMessage.parseErrorMessage(response))
+        }
+
+        return@withContext response.isSuccessful
+    }
 }

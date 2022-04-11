@@ -19,4 +19,9 @@ interface RetrofitAPI {
     suspend fun verifyCertificationMail(
         @Body data: HashMap<String, Any>
     ): Response<Message>
+
+    @POST("/auth/signup")
+    suspend fun signup(
+        @Body data: HashMap<String, Any>
+    ): Response<Message>
 }

@@ -1,6 +1,7 @@
 package com.example.ourtodo.screen.login
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.ActivitySignUpBinding
 import com.example.ourtodo.screen.base.BaseActivity
@@ -34,6 +35,13 @@ class SignUpActivity : BaseActivity<SignUpViewModel, ActivitySignUpBinding>() {
             supportFragmentManager.beginTransaction()
                 .add(R.id.signUpContainer, fragment, tag)
                 .commit()
+        }
+    }
+
+    fun removeFragment(fragment: Fragment, tag: String) {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            remove(fragment)
         }
     }
 

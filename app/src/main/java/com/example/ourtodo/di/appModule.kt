@@ -20,7 +20,7 @@ var viewModelModule = module {
 
     viewModel { SignUpViewModel() }
     viewModel { LoginViewModel() }
-    viewModel { PasswordViewModel() }
+    viewModel { PasswordViewModel(get()) }
     viewModel { LoginFragmentViewModel()}
     viewModel { EmailCertificateViewModel(get()) }
     viewModel { VerifyCertificateViewModel(get())}
