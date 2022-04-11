@@ -1,5 +1,6 @@
 package com.example.ourtodo.data.retrofit
 
+import com.example.ourtodo.data.response.Login
 import com.example.ourtodo.data.response.Message
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -24,4 +25,9 @@ interface RetrofitAPI {
     suspend fun signup(
         @Body data: HashMap<String, Any>
     ): Response<Message>
+
+    @POST("/auth/login")
+    suspend fun login(
+        @Body data: HashMap<String, Any>
+    ): Response<Login>
 }

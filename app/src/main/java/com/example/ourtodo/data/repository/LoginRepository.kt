@@ -1,9 +1,11 @@
 package com.example.ourtodo.data.repository
 
 import android.util.Log
+import com.example.ourtodo.data.response.Login
 import com.example.ourtodo.data.retrofit.RetrofitInstance
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import retrofit2.Retrofit
 
 class LoginRepository(
     private val ioDispatcher: CoroutineDispatcher,
@@ -37,4 +39,6 @@ class LoginRepository(
 
         return@withContext response.isSuccessful
     }
+
+    suspend fun login(data: HashMap<String, Any>) = RetrofitInstance.api.login(data)
 }

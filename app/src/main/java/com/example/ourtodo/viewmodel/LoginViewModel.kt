@@ -1,5 +1,7 @@
 package com.example.ourtodo.viewmodel
 
 
-class LoginViewModel: BaseViewModel() {
+class LoginViewModel(): BaseViewModel() {
+
+
 }

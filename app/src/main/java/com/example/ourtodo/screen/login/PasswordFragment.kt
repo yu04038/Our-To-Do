@@ -95,8 +95,6 @@ class PasswordFragment : BaseFragment<PasswordViewModel, FragmentPasswordBinding
                 data.put("password", firstPassword)
                 data.put("confirmPassword", secondPassword)
 
-//                Log.e("password", "$firstPassword, $secondPassword")
-
                 viewModel.signup(data)
             }
         }

@@ -7,3 +7,11 @@ data class Message(
     @SerializedName("message")
     val message: String
 )
+
+data class Login(
+    @SerializedName("message")
+    val message: String,
+
+    @SerializedName("accessToken")
+    val accessToken: String
+)
