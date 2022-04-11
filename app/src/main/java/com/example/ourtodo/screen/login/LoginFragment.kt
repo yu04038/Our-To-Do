@@ -1,6 +1,7 @@
 package com.example.ourtodo.screen.login
 
 
+import android.content.Intent
 import android.graphics.Color
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.FragmentLoginBinding
 import com.example.ourtodo.screen.base.BaseFragment
+import com.example.ourtodo.screen.main.MainActivity
 import com.example.ourtodo.viewmodel.LoginFragmentViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -30,7 +32,14 @@ class LoginFragment : BaseFragment<LoginFragmentViewModel, FragmentLoginBinding>
     override fun observeData() = with(binding){
         viewModel.errorMessage.observe(this@LoginFragment, Observer { message ->
             when(message) {
-                true -> { loginFailure.visibility = View.GONE}
+                true -> {
+                    loginFailure.visibility = View.GONE
+
+//                    (activity as LoginActivity).finish()
+//
+//                    val intent = Intent(activity, MainActivity::class.java)
+//                    startActivity(intent)
+                }
                 false -> { loginFailure.visibility = View.VISIBLE }
             }
         })
