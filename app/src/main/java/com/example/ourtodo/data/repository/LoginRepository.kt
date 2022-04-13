@@ -1,5 +1,6 @@
 package com.example.ourtodo.data.repository
 
+import android.util.JsonToken
 import android.util.Log
 import com.example.ourtodo.data.response.Login
 import com.example.ourtodo.data.retrofit.RetrofitInstance
@@ -41,4 +42,8 @@ class LoginRepository(
     }
 
     suspend fun login(data: HashMap<String, Any>) = RetrofitInstance.api.login(data)
+
+    suspend fun tokenRefresh(accessToken: String, refreshToken: String) = RetrofitInstance.api.tokenRefresh(accessToken, refreshToken)
+
+    suspend fun test(accessToken: String) = RetrofitInstance.api.test(accessToken)
 }

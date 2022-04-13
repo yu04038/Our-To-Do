@@ -64,7 +64,7 @@ class VerifyCertificateFragment() : BaseFragment<VerifyCertificateViewModel, Fra
 
         setTimer()
 
-        certificationCode.setOnFocusChangeListener{ view, b ->
+        certificationCode.setOnFocusChangeListener{ _, b ->
             when(b) {
                 true -> certificateLayout.setBackgroundResource(R.drawable.email_certificate_edittext_shape_valid)
                 else -> {}

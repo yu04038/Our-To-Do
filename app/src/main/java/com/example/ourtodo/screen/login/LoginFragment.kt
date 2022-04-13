@@ -35,10 +35,10 @@ class LoginFragment : BaseFragment<LoginFragmentViewModel, FragmentLoginBinding>
                 true -> {
                     loginFailure.visibility = View.GONE
 
-//                    (activity as LoginActivity).finish()
-//
-//                    val intent = Intent(activity, MainActivity::class.java)
-//                    startActivity(intent)
+                    (activity as LoginActivity).finish()
+
+                    val intent = Intent(activity, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 false -> { loginFailure.visibility = View.VISIBLE }
             }

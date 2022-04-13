@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_focused.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_valid.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/main_bookmark_shape.xml" value="0.253" />
         <entry key="app/src/main/res/drawable/main_imageview_shape.xml" value="0.253" />
         <entry key="app/src/main/res/drawable/main_setting_shape.xml" value="0.253" />
         <entry key="app/src/main/res/drawable/main_todo_shape.xml" value="0.253" />
@@ -23,7 +24,7 @@
         <entry key="app/src/main/res/font/rota.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/font/spoqa.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="1.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_email_certificate.xml" value="0.33" />

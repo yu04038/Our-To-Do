@@ -9,6 +9,7 @@ import com.example.ourtodo.data.repository.ParseErrorMessage
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import okhttp3.Headers
 import java.lang.Exception
 import java.net.ConnectException
 
@@ -27,7 +28,8 @@ class LoginFragmentViewModel(
 
                 if (response.code() == 201) {
                     accessToken = response.body()!!.accessToken
-                    refreshToken = response.headers().values("Set-Cookie")[0].split(";")[0].split("=")[1]
+//                    refreshToken = response.headers().values("Set-Cookie")[0].split(";")[0].split("=")[1]
+                    refreshToken = response.headers().values("Set-Cookie")[0]
                     Log.e("refresh", refreshToken)
                     Log.e("access", accessToken)
                     OurToDoApplication.prefs.setString("accessToken", accessToken)

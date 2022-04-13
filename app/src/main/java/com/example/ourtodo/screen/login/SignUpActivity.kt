@@ -37,12 +37,4 @@ class SignUpActivity : BaseActivity<SignUpViewModel, ActivitySignUpBinding>() {
                 .commit()
         }
     }
-
-    fun removeFragment(fragment: Fragment, tag: String) {
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            remove(fragment)
-        }
-    }
-
 }
