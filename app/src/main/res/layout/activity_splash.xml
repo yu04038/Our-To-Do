@@ -57,9 +57,9 @@
 
         <ImageView
             android:id="@+id/splash_todo_icon"
-            android:layout_width="93px"
-            android:layout_height="93px"
-            android:layout_marginRight="38.49px"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="12.12dp"
             android:src="@drawable/splash_todo_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,9 +92,9 @@
 
         <ImageView
             android:id="@+id/icon_todo"
-            android:layout_width="93px"
-            android:layout_height="93px"
-            android:layout_marginRight="38.49px"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="12.12dp"
             android:src="@drawable/splash_bookmark_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
