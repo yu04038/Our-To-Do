@@ -3,6 +3,7 @@ package com.example.ourtodo.screen.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.R
 import com.example.ourtodo.databinding.ActivityMainBinding
@@ -41,7 +42,11 @@ class MainActivity  : BaseActivity<MainViewModel, ActivityMainBinding>(){
         viewModel.test(accessToken)
 
         settingLayout.setOnClickListener {
+            Log.e("click", "setting")
+        }
 
+        todoLayout.setOnClickListener {
+            Log.e("click", "todo")
         }
     }
 }
