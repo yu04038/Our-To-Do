@@ -10,6 +10,9 @@
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_focused.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_valid.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/main_add_todo_dialog_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_add_todo_edittext_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_add_todo_ok.xml" value="0.118" />
         <entry key="app/src/main/res/drawable/main_blank_shape.xml" value="0.118" />
         <entry key="app/src/main/res/drawable/main_bookmark_shape.xml" value="0.253" />
         <entry key="app/src/main/res/drawable/main_imageview_shape.xml" value="0.253" />
@@ -28,10 +31,11 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3203488159179687" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_add_todo.xml" value="0.2680526733398437" />
         <entry key="app/src/main/res/layout/fragment_email_certificate.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_password.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_to_do.xml" value="0.13590313842977225" />
+        <entry key="app/src/main/res/layout/fragment_to_do.xml" value="0.2851182197496523" />
         <entry key="app/src/main/res/layout/fragment_verify_certificate.xml" value="0.33" />
       </map>
     </option>

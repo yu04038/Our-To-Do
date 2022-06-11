@@ -19,6 +19,7 @@ var appModule = module {
 var viewModelModule = module {
 
     viewModel { SignUpViewModel() }
+    viewModel { ToDoViewModel() }
     viewModel { LoginViewModel() }
     viewModel { MainViewModel(get(), get()) }
     viewModel { PasswordViewModel(get()) }
