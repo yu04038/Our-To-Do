@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.R
@@ -234,6 +235,19 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
                     data.put("color", color)
 
                     viewModel.addTag(accessToken, data)
+
+                    viewModel.complete.observe(this@BottomSheetFragment, Observer { message ->
+                        when (message) {
+                            true -> {
+                                Toast.makeText(activity, "태그 생성을 완료했습니다.", Toast.LENGTH_SHORT)
+                                    .show()
+                                dialog?.dismiss()
+                            }
+                            false -> {
+
+                            }
+                        }
+                    })
                 }
             } else {
                 Toast.makeText(activity, "태그 색깔을 선택해주세요!", Toast.LENGTH_SHORT).show()

@@ -19,11 +19,12 @@ var appModule = module {
 
 var viewModelModule = module {
 
+    viewModel { AddTodoDialogViewModel() }
     viewModel { BottomSheetViewModel( get() ) }
     viewModel { SignUpViewModel() }
-    viewModel { ToDoViewModel() }
+    viewModel { ToDoViewModel(get(), get()) }
     viewModel { LoginViewModel() }
-    viewModel { MainViewModel(get(), get(), get()) }
+    viewModel { MainViewModel(get(), get()) }
     viewModel { PasswordViewModel(get()) }
     viewModel { LoginFragmentViewModel(get())}
     viewModel { EmailCertificateViewModel(get()) }
