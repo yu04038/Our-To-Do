@@ -140,7 +140,7 @@
             app:layout_constraintTop_toBottomOf="@+id/colorPickerOrange" />
 
         <Button
-            android:id="@+id/addTodo_ok"
+            android:id="@+id/addTag_ok"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"

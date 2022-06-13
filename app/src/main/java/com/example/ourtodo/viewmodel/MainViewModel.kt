@@ -24,10 +24,10 @@ class MainViewModel(
         try {
             loginRepository.test(accessToken).let { response ->
                 if (response.code() == 401) {
-                    Log.e("test", parseErrorMessage.parseErrorMessage(response))
+                    Log.e("test", "토큰 만료")
                     tokenRefresh(accessToken, refreshToken)
                 } else {
-                    Log.e("test", response.body()!!.message)
+                    Log.e("test", "${"만료 안됨"} ${response.code()}")
                 }
             }
         } catch (e: ConnectException) {

@@ -41,4 +41,10 @@ interface RetrofitAPI {
     suspend fun test(
         @Header("Authorization") accessToken: String
     ): Response<Message>
+
+    @POST("/tag")
+    suspend fun addTag(
+        @Header("Authorization") accessToken: String,
+        @Body tag: HashMap<String, Any>
+    ): Response<Message>
 }

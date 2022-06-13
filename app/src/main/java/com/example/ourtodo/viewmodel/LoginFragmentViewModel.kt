@@ -28,7 +28,6 @@ class LoginFragmentViewModel(
 
                 if (response.code() == 201) {
                     accessToken = response.body()!!.accessToken
-//                    refreshToken = response.headers().values("Set-Cookie")[0].split(";")[0].split("=")[1]
                     refreshToken = response.headers().values("Set-Cookie")[0]
                     Log.e("refresh", refreshToken)
                     Log.e("access", accessToken)
