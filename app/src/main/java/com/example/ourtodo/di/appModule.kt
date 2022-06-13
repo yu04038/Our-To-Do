@@ -24,7 +24,7 @@ var viewModelModule = module {
     viewModel { SignUpViewModel() }
     viewModel { ToDoViewModel(get(), get()) }
     viewModel { LoginViewModel() }
-    viewModel { MainViewModel(get(), get()) }
+    viewModel { MainViewModel(get(), get(), get()) }
     viewModel { PasswordViewModel(get()) }
     viewModel { LoginFragmentViewModel(get())}
     viewModel { EmailCertificateViewModel(get()) }

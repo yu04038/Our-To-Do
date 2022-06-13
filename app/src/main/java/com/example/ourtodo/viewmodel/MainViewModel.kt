@@ -13,12 +13,23 @@ import java.net.ConnectException
 
 class MainViewModel(
     private val loginRepository: LoginRepository,
+    private val mainRepository: MainRepository,
     private val parseErrorMessage: ParseErrorMessage
 ) : BaseViewModel() {
 
     val isUsable = MutableLiveData<Boolean>()
+    var todoCount = MutableLiveData<Int>()
 
     private val refreshToken = OurToDoApplication.prefs.getString("refreshToken")
+
+    fun getTodo(accessToken: String) = viewModelScope.launch {
+        mainRepository.getTodo(accessToken).let { response ->
+            if (response.isSuccessful) {
+                Log.e("getTodo", response.body()?.todos.toString())
+                todoCount.value = response.body()?.todos?.size
+            }
+        }
+    }
 
     fun test(accessToken: String) = viewModelScope.launch {
         try {

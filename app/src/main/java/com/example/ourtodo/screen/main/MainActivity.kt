@@ -36,11 +36,22 @@ class MainActivity  : BaseActivity<MainViewModel, ActivityMainBinding>(){
                 true -> { }
             }
         }
+
+        viewModel.todoCount.observe(this) {
+            when(it) {
+                0 -> {
+                    showFragment(ToDoFragment.newInstance(), ToDoFragment.TAG)
+                }
+                else -> {
+
+                }
+            }
+        }
     }
 
     override fun initViews() = with(binding){
         super.initViews()
-        showFragment(ToDoFragment.newInstance(), ToDoFragment.TAG)
+
         viewModel.test(accessToken)
 
         viewModel.getTodo(accessToken)

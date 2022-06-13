@@ -44,8 +44,8 @@ class MainRepository(
             return@withContext parseErrorMessage.parseErrorMessage(response)
         }
     }
-//
-//    suspend fun login(data: HashMap<String, Any>) = RetrofitInstance.api.login(data)
+
+    suspend fun getTodo(accessToken: String) = RetrofitInstance.api.getTodo(accessToken)
 //
 //    suspend fun tokenRefresh(accessToken: String, refreshToken: String) = RetrofitInstance.api.tokenRefresh(accessToken, refreshToken)
 //

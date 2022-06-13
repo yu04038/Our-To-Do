@@ -4,6 +4,7 @@ import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.data.response.Login
 import com.example.ourtodo.data.response.Message
 import com.example.ourtodo.data.response.tagList
+import com.example.ourtodo.data.response.todoList
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
@@ -59,4 +60,9 @@ interface RetrofitAPI {
         @Header("Authorization") accessToken: String,
         @Body todo: HashMap<String, Any>
     ): Response<Message>
+
+    @GET("/todo")
+    suspend fun getTodo(
+        @Header("Authorization") accessToken: String
+    ): Response<todoList>
 }
