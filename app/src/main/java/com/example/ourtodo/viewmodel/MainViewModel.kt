@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.ourtodo.OurToDoApplication
 import com.example.ourtodo.data.repository.LoginRepository
+import com.example.ourtodo.data.repository.MainRepository
 import com.example.ourtodo.data.repository.ParseErrorMessage
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -12,12 +13,21 @@ import java.net.ConnectException
 
 class MainViewModel(
     private val loginRepository: LoginRepository,
+    private val mainRepository: MainRepository,
     private val parseErrorMessage: ParseErrorMessage
 ) : BaseViewModel() {
 
     val isUsable = MutableLiveData<Boolean>()
 
     private val refreshToken = OurToDoApplication.prefs.getString("refreshToken")
+
+    fun findTag(accessToken: String) = viewModelScope.launch {
+        mainRepository.findTag(accessToken).let { response ->
+            if (response.message == "태그 조회를 완료했습니다.") {
+                Log.e("tagList", response.tagList.toString())
+            }
+        }
+    }
 
 
     fun test(accessToken: String) = viewModelScope.launch {

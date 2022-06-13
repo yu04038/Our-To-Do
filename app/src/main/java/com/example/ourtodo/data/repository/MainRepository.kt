@@ -3,6 +3,7 @@ package com.example.ourtodo.data.repository
 import android.util.JsonToken
 import android.util.Log
 import com.example.ourtodo.data.response.Login
+import com.example.ourtodo.data.response.tagList
 import com.example.ourtodo.data.retrofit.RetrofitInstance
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
@@ -23,16 +24,16 @@ class MainRepository(
             return@withContext parseErrorMessage.parseErrorMessage(response)
         }
     }
-//
-//    suspend fun verifyCertificationMail(data: HashMap<String, Any>) : String = withContext(ioDispatcher) {
-//        val response = RetrofitInstance.api.verifyCertificationMail(data)
-//
-//        if (response.isSuccessful) {
-//            return@withContext response.body()!!.message
-//        } else {
-//            return@withContext parseErrorMessage.parseErrorMessage(response)
-//        }
-//    }
+
+    suspend fun findTag(accessToken: String) : tagList = withContext(ioDispatcher) {
+        val response = RetrofitInstance.api.findTag(accessToken)
+
+        if (response.isSuccessful) {
+            return@withContext response.body()!!
+        } else {
+            return@withContext response.body()!!
+        }
+    }
 //
 //    suspend fun signup(data: HashMap<String, Any>) : Boolean = withContext(ioDispatcher) {
 //        val response = RetrofitInstance.api.signup(data)

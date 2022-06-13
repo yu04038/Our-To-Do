@@ -42,6 +42,7 @@ class MainActivity  : BaseActivity<MainViewModel, ActivityMainBinding>(){
         super.initViews()
         showFragment(ToDoFragment.newInstance(), ToDoFragment.TAG)
         viewModel.test(accessToken)
+        viewModel.findTag(accessToken)
 
         settingLayout.setOnClickListener {
             Log.e("click", "setting")
