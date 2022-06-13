@@ -3,11 +3,67 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.30027173913043476" />
+        <entry key="app/src/main/res/drawable/color_picker_blue.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_blue_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_darkblue.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_darkblue_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_darkgreen.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_darkgreen_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_gray.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_gray_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_green.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_green_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_oragne.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_orange_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_pink.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_pink_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_purple.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_purple_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_red.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_red_selected.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/color_picker_yellow.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_picker_yellow_selected.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/email_certificate_button_shape.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/email_certificate_button_shape_disabled.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/email_certificate_button_shape_enabled.xml" value="0.1355" />
+        <entry key="app/src/main/res/drawable/email_certificate_button_shape_failure.xml" value="0.1355" />
+        <entry key="app/src/main/res/drawable/email_certificate_edittext_shape.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_focused.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/email_certificate_edittext_shape_not_valid.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/main_add_tag_dialog_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_add_todo_dialog_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_add_todo_edittext_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_add_todo_ok.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_blank_shape.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/main_bookmark_shape.xml" value="0.253" />
+        <entry key="app/src/main/res/drawable/main_imageview_shape.xml" value="0.253" />
+        <entry key="app/src/main/res/drawable/main_setting_shape.xml" value="0.253" />
+        <entry key="app/src/main/res/drawable/main_todo_shape.xml" value="0.253" />
+        <entry key="app/src/main/res/drawable/password_button_shape_disabled.xml" value="0.1355" />
+        <entry key="app/src/main/res/drawable/splash_bookmark_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_button_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_image_radius.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_our_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_radius.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/splash_todo_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/font/rota.xml" value="0.5645833333333333" />
+        <entry key="app/src/main/res/font/spoqa.xml" value="0.5645833333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.284698486328125" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/bottom_sheet_dialog_add_tag.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_add_todo.xml" value="0.2680526733398437" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.40046296296296297" />
+        <entry key="app/src/main/res/layout/fragment_email_certificate.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_password.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_to_do.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_verify_certificate.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

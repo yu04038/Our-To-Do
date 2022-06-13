@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#606060"
+    tools:context=".screen.main.BottomSheetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".screen.main.BottomSheetFragment"
+        android:layout_width="match_parent"
+        android:layout_height="293dp"
+        android:background="@drawable/main_add_tag_dialog_shape">
+
+        <ImageButton
+            android:id="@+id/tagXButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/x_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tagEditText"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/main_add_todo_edittext_shape"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:hint="태그 입력"
+            android:textColor="#333333"
+            android:textColorHint="#BFBFBF"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/tagXButton"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <ImageView
+            android:id="@+id/colorPickerRed"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/color_picker_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+        <ImageView
+            android:id="@+id/colorPickerOrange"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/color_picker_orange"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerRed"
+            app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+        <ImageView
+            android:id="@+id/colorPickerYellow"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/color_picker_yellow"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerOrange"
+            app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+        <ImageView
+            android:id="@+id/colorPickerGreen"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/color_picker_green"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerYellow"
+            app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+        <ImageView
+            android:id="@+id/colorPickerDarkGreen"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/color_picker_darkgreen"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerGreen"
+            app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+        <ImageView
+            android:id="@+id/colorPickerBlue"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_picker_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerRed" />
+
+        <ImageView
+            android:id="@+id/colorPickerDarkBlue"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_picker_darkblue"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerBlue"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerOrange" />
+
+        <ImageView
+            android:id="@+id/colorPickerPurple"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_picker_purple"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerDarkBlue"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerOrange" />
+
+        <ImageView
+            android:id="@+id/colorPickerPink"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_picker_pink"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerPurple"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerOrange" />
+
+        <ImageView
+            android:id="@+id/colorPickerGray"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_picker_gray"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerPink"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerOrange" />
+
+        <Button
+            android:id="@+id/addTag_ok"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/main_add_todo_ok"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
+            android:text="확인"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerPurple" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
