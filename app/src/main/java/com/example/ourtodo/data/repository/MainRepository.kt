@@ -34,18 +34,16 @@ class MainRepository(
             return@withContext response.body()!!
         }
     }
-//
-//    suspend fun signup(data: HashMap<String, Any>) : Boolean = withContext(ioDispatcher) {
-//        val response = RetrofitInstance.api.signup(data)
-//
-//        if (response.isSuccessful) {
-//            Log.e("회원가입", response.body().toString())
-//        } else {
-//            Log.e("회원가입", parseErrorMessage.parseErrorMessage(response))
-//        }
-//
-//        return@withContext response.isSuccessful
-//    }
+
+    suspend fun addTodo(accessToken: String, data: HashMap<String, Any>) : String = withContext(ioDispatcher) {
+        val response = RetrofitInstance.api.addTodo(accessToken, data)
+
+        if (response.isSuccessful) {
+            return@withContext response.body()!!.message
+        } else {
+            return@withContext parseErrorMessage.parseErrorMessage(response)
+        }
+    }
 //
 //    suspend fun login(data: HashMap<String, Any>) = RetrofitInstance.api.login(data)
 //

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
@@ -31,9 +32,13 @@ class AddTodoDialog() : DialogFragment() {
 
     private lateinit var binding: DialogAddTodoBinding
     val viewModel by viewModel<AddTodoDialogViewModel>()
+    private val accessToken = "Bearer " + OurToDoApplication.prefs.getString("accessToken")
 
     private var tagListColor = ArrayList<String>()
     private var tagListName = ArrayList<String>()
+
+    private var data = HashMap<String, Any>()
+    private var position = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,9 +65,45 @@ class AddTodoDialog() : DialogFragment() {
 
         spinnerTag.adapter = adapter
 
+        spinnerTag.onItemSelectedListener = object :AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                position = p2 + 1
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
 
         addToDoXButton.setOnClickListener {
+            todoEditText.text = null
             dialog?.dismiss()
+        }
+
+        addTodoOk.setOnClickListener {
+
+
+            if (todoEditText.text.toString() == "") {
+                Toast.makeText(activity, "Todo의 내용이 비어있습니다.", Toast.LENGTH_SHORT).show()
+            } else {
+                data.put("tagId", position)
+                data.put("content", todoEditText.text.toString())
+
+                viewModel.addTodo(accessToken, data)
+                viewModel.complete.observe(this@AddTodoDialog, Observer { message ->
+                    when (message) {
+                        true -> {
+                            Toast.makeText(activity, "ToDo 생성을 완료했습니다.", Toast.LENGTH_SHORT)
+                                .show()
+                            dialog?.dismiss()
+                        }
+                        false -> {
+
+                        }
+                    }
+                })
+            }
+
         }
 
         addTag.setOnClickListener {

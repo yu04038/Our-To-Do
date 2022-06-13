@@ -53,4 +53,10 @@ interface RetrofitAPI {
     suspend fun findTag(
         @Header("Authorization") accessToken: String
     ): Response<tagList>
+
+    @POST("/todo")
+    suspend fun addTodo(
+        @Header("Authorization") accessToken: String,
+        @Body todo: HashMap<String, Any>
+    ): Response<Message>
 }

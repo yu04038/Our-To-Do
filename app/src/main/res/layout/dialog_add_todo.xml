@@ -20,7 +20,7 @@
             android:text="할 일 추가"
             android:textColor="#333333"
             android:textSize="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintBottom_toTopOf="@+id/todoEditText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/todoEditText"
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_marginTop="7dp"
@@ -55,7 +55,7 @@
             android:id="@+id/spinner_tag"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/todoEditText" />
 
         <Button
             android:id="@+id/addTodo_ok"

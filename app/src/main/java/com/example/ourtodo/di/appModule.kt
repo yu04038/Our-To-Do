@@ -19,7 +19,7 @@ var appModule = module {
 
 var viewModelModule = module {
 
-    viewModel { AddTodoDialogViewModel() }
+    viewModel { AddTodoDialogViewModel(get()) }
     viewModel { BottomSheetViewModel( get() ) }
     viewModel { SignUpViewModel() }
     viewModel { ToDoViewModel(get(), get()) }

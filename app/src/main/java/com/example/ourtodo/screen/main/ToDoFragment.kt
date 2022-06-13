@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
@@ -26,6 +27,7 @@ class ToDoFragment : BaseFragment<ToDoViewModel, FragmentToDoBinding>() {
     override val viewModel by viewModel<ToDoViewModel>()
     private val tagListName = ArrayList<String>()
     private val tagListColor = ArrayList<String>()
+
     override fun observeData() {
         viewModel.liveData.observe(this, Observer { message ->
             when(message) {
@@ -49,6 +51,8 @@ class ToDoFragment : BaseFragment<ToDoViewModel, FragmentToDoBinding>() {
 
                     Log.e("tagListName", tagListName.toString())
                     Log.e("tagListColor", tagListColor.toString())
+
+
                 }
             }
         })
@@ -65,8 +69,9 @@ class ToDoFragment : BaseFragment<ToDoViewModel, FragmentToDoBinding>() {
         }
 
         addToDoTextView.setOnClickListener {
-            dialog.show(activity!!.supportFragmentManager, TAG)
             viewModel.findTag(accessToken)
+
+            dialog.show(activity!!.supportFragmentManager, TAG)
         }
     }
 
