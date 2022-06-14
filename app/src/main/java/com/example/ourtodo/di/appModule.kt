@@ -23,6 +23,7 @@ var viewModelModule = module {
     viewModel { BottomSheetViewModel( get() ) }
     viewModel { SignUpViewModel() }
     viewModel { ToDoViewModel(get(), get()) }
+    viewModel { ToDo2ViewModel(get(), get()) }
     viewModel { LoginViewModel() }
     viewModel { MainViewModel(get(), get(), get()) }
     viewModel { PasswordViewModel(get()) }

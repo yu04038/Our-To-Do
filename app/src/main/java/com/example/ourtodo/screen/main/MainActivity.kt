@@ -43,7 +43,7 @@ class MainActivity  : BaseActivity<MainViewModel, ActivityMainBinding>(){
                     showFragment(ToDoFragment.newInstance(), ToDoFragment.TAG)
                 }
                 else -> {
-
+                    showFragment(ToDo2Fragment.newInstance(), ToDo2Fragment.TAG)
                 }
             }
         }

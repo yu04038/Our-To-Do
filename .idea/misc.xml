@@ -46,6 +46,8 @@
         <entry key="app/src/main/res/drawable/splash_our_shape.xml" value="0.361" />
         <entry key="app/src/main/res/drawable/splash_radius.xml" value="0.361" />
         <entry key="app/src/main/res/drawable/splash_todo_shape.xml" value="0.361" />
+        <entry key="app/src/main/res/drawable/todo_pink.xml" value="0.1145" />
+        <entry key="app/src/main/res/drawable/todo_white.xml" value="0.1145" />
         <entry key="app/src/main/res/font/rota.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/font/spoqa.xml" value="0.5645833333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
@@ -59,6 +61,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_to_do.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_to_do2.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/fragment_verify_certificate.xml" value="0.33" />
       </map>
     </option>
